@@ -1,0 +1,48 @@
+<!DOCTYPE html>  
+<html>  
+ <head>  
+    <meta charset="UTF-8">
+	<title>Questionnaire Alimentaire</title>  
+ </head>  
+    <body> 
+        <h1>Voici le Questionnaire</h1> 
+        <div class="questionnaire">
+            <form action="/page-traitement-donnees" method="post">
+                <div>
+                <label for="Q1">Mangez vous le matin ?</label>
+                <input type="radio" name="question" value="oui" id="oui" onclick="openQuest()"/> <label for="oui">oui</label>
+                <input type="radio" name="question" value="non" id="non" onclick="closeQuest()"/> <label for="non">non</label>
+                </div><br>
+                <div id="myQuest">
+                <label for="R1">Si Oui vous etes plutôt ?</label>
+                    <input type="checkbox" name="reponse1" value="oui" id="oui" /> <label for="oui">Produit Laitier</label>
+                    <input type="checkbox" name="reponse2" value="non" id="non" /> <label for="non">Charcuterie</label>
+                    <input type="checkbox" name="reponse3" value="oui" id="oui" /> <label for="oui">Oeuf</label>
+                    <input type="checkbox" name="reponse4" value="non" id="non" /> <label for="non">Fruit</label>
+                    <input type="checkbox" name="reponse5" value="oui" id="oui" /> <label for="oui">Cereales</label>
+                </div><br>
+                
+                <div>
+                    <label for="R1"> Que mangez-vous au Diner ?</label>
+                    <input type="checkbox" name="reponse1" value="oui" id="oui" /> <label for="oui">Plat de Legume</label>
+                    <input type="checkbox" name="reponse2" value="non" id="non" /> <label for="non">Plat de Viande</label>
+                    <input type="checkbox" name="reponse3" value="oui" id="oui" /> <label for="oui">Plat de Poisson</label>
+                    <input type="checkbox" name="reponse4" value="non" id="non" /> <label for="non">Plat de Legume</label>
+                    <input type="checkbox" name="reponse5" value="oui" id="oui" /> <label for="oui">Plat de Pates</label>
+                </div> <br>
+                <div>
+                    <label for="sujet">Quel plat preferez-vous mangez ?</label>
+                    <select name="sujet" id="sujet" required>
+                    <option value="" disabled selected hidden>Choisissez le plat</option>
+                    <option value="probleme-compte">Problème avec mon compte</option>
+                    <option value="question-produit">Question à propos d’un produit</option>
+                    <option value="suivi-commande">Suivi de ma commande</option>
+                    <option value="autre">Autre...</option>
+                    </select>
+                </div> <br>
+            </form>
+        </div>
+        <button type="submit" class="btn"> Valider </button>
+        <button type="submit" class="btn"> Retour </button>
+    </body>
+</html>

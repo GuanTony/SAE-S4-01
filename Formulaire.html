@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire Alimentaire</title>
+    <link rel="stylesheet" href="Formulaire.css">
+</head>
+
+<body>
+
+    <div id="titre"><p>Formulaire</p> </div>
+    <div class="formulaire" id="Form">
+        <form action="Formulaire.php" method="POST" class="formulaire-container">
+           <div id="presentation"><h1> Presentez-vous</h1></div>
+            <p>
+                <label for="name"> Nom</label>
+                <input type="text" placeholder="Votre nom" name="name" required>
+            </p>
+            <p>
+                <label for="firstname"> Prenom</label>
+                <input type="text" placeholder="Votre Prenom" name="prenom" required>
+            </p>
+            <p>Niveau Scolaire :
+                <select name="Etablissement" id="Etablissement">
+                    <option value="Lycée">College</option>
+                    <option value="College">Lycée</option>
+                </select>
+            </p>
+            <p>
+                <label for="age"> Age </label>
+                <input type="number" placeholder="Quel Age avez-vous" name="age" required min="0">
+            </p>
+            <button type="submit" class="btn"> Valider </button>
+            <button type="button" class="btn-cancel" onclick="closeForm()"> Annuler</button>
+        </form>
+    </div>
+</body>
+
+</html>
