@@ -1,0 +1,124 @@
+#titre {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#matin {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.btn{
+    display:flex;
+    flex-direction: row;
+    color:#fff;
+    outline: none;
+    border: 0;
+    color: #fff;
+    padding:10px 20px;
+    text-transform:uppercase;
+    margin-top:50px;
+    border-radius:2px;
+    cursor:pointer;
+    position:relative;
+}
+
+#btnvalider{
+    background-color:#2ecc71;
+    flex-direction: row;
+}
+#btnretour{
+    background-color:#e74c3c;
+    flex-direction: row;
+}
+
+.container-flexe {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+    margin-left: 28%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#questionmatin{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+#questiondiner{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.diner{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#choixmatin{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+   margin :20px;
+}
+#plutot{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#suivantmatin{
+    background-color:#2ecc71;
+  margin-left: 450px;
+    display:flex;
+    flex-direction: row;
+    color:#fff;
+    outline: none;
+    border: 0;
+    color: #fff;
+    padding:10px 20px;
+    text-transform:uppercase;
+    margin-top:50px;
+    border-radius:2px;
+    cursor:pointer;
+    position:relative;
+}
+
+form{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+body {
+    background-color: #7A898C;
+    animation: color 20s infinite linear;
+    font-family: Arial, Helvetica, "Comic Sans MS", serif;
+}

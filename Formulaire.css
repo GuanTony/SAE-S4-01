@@ -1,5 +1,22 @@
+@keyframes color {
+    0%   { background: black; }
+    10%  { background: #273133; }
+    20%  { background: #4E6266; }
+    30%  { background: #5E7074; }
+    40%  { background: #6D7D81; }
+    50% { background: #7A898C; }
+    60%   { background: #6D7D81; }
+    70%  { background: #5E7074; }
+    80%  { background: #4E6266; }
+    90%  { background: #273133; }
+    100%  { background: black; }
+
+}
+
+
 body {
-    background-color: lightgreen;
+    background-color: black;
+    animation: color 20s infinite linear;
     font-family: Arial, Helvetica, "Comic Sans MS", serif;
 }
 
@@ -13,12 +30,15 @@ body {
 }
 
 .formulaire {
+
     width: 100%;
     margin: 0 auto;
+    margin-top: 10%;
     text-align: center;
 }
 
 .formulaire-container {
+
     width: 500px;
     margin: 0 auto;
     padding: 30px;
@@ -80,7 +100,28 @@ body {
 
 }
 
-input{
-    outline : none;
-    border :none;
+input {
+    outline: none;
+    border: none;
 }
+.age{
+width: 100px;
+}
+
+
+label{
+    display:block;
+    float:left;
+    width:150px;
+    text-align:left;
+}
+input, select{
+    display:block;
+    width:200px;
+    margin-left: 50%;
+    height: 25px;
+
+}
+
+
+

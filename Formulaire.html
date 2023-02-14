@@ -9,23 +9,22 @@
 
 <body>
 
-<div id="titre"><p>Formulaire</p></div>
 <div class="formulaire" id="Form">
     <form action="Formulaire.php" method="POST" class="formulaire-container">
         <div id="presentation"><h1> Présentez-vous</h1></div>
         <div id="nom"><p>
-            <label for="name"> Nom</label>
+            <label for="nom"> Nom</label>
             <input type="text" placeholder="Votre nom" name="name" required>
         </p>
         </div>
         <div id="prenom">
             <p>
-                <label for="firstname"> Prénom</label>
+                <label for="prenom"> Prénom</label>
                 <input type="text" placeholder="Votre prénom" name="prenom" required>
             </p>
         </div>
         <div id="niveau">
-            <p>Niveau Scolaire :
+            <label for="niveau"> Niveau Scolaire</label>
                 <select name="Etablissement" id="Etablissement">
                     <option value="Lycée">Collège</option>
                     <option value="College">Lycée</option>
@@ -34,7 +33,7 @@
         </div>
         <div id="age"><p>
             <label for="age"> Age </label>
-            <input type="number" placeholder="Votre age" name="age" required min="0">
+            <input class="age" type="number" placeholder="Votre age" name="age" required min="1" max="20">
         </p></div>
 
         <div class="container-flex">
@@ -45,7 +44,6 @@
                 <button type="button" class="btn cancel" onclick="closeForm()"> Annuler</button>
             </div>
         </div>
-
     </form>
 </div>
 </body>

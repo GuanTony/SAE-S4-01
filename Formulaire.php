@@ -1,6 +1,6 @@
   <?php
   session_start(); 
-  $name =  isset($_POST['name'])?($_POST['name']):'';
+  $name =  isset($_POST['nom'])?($_POST['nom']):'';
   $prenom =  isset($_POST['prenom'])?($_POST['prenom']):'';
   $Etablissement =  isset($_POST['Etablissement'])?($_POST['Etablissement']):'';
   $age =  isset($_POST['age'])?($_POST['age']):'';
