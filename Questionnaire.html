@@ -2,64 +2,45 @@
 <html>  
  <head>  
     <meta charset="UTF-8">
-	<title>Questionnaire Alimentaire</title>
-         <link rel="stylesheet" href="Questionnaire.css">
- </head>
+	<title>Questionnaire Alimentaire</title>  
+    <link rel="stylesheet" href="Questionnaire.css">
+ </head>  
     <body> 
-       <div id="titre"> <h1>Questionnaire</h1> </div>
+        <h1>Voici le Questionnaire</h1> 
         <div class="questionnaire">
-            <form action="/page-traitement-donnees" method="post">
-                <div id="matin">
-                    <div id ="questionmatin">
-                <label>Mangez vous le matin ?</label>
-                </div>
-                <input type="radio" name="question" value="oui" class="oui" onclick="openQuest()"/> <label >oui</label>
-                <input type="radio" name="question" value="non" class="non" onclick="closeQuest()" checked/> <label >non</label>
+            <form action="Questionnaire.php" method="POST">
+                <div id="First">
+                <label for="Q1">Mangez vous le matin ?</label>
+                <input type="radio" name="question" value="oui" id="oui" onclick="openQuest()"/> <label>oui</label>
+                <input type="radio" name="question" value="non" id="non" onclick="closeQuest()"/> <label>non</label>
                 </div><br>
-
-                <div id="choixmatin" class="myQuest" style="display: none">
-                    <div id="plutot">
-                    <label>Vous êtes plutôt ?</label>
-                    </div>
-                    <input type="checkbox" name="reponse1" value="oui" class="oui" /> <label>Produit laitier</label>
-                    <input type="checkbox" name="reponse2" value="non" class="non" /> <label >Charcuterie</label>
-                    <input type="checkbox" name="reponse3" value="oui" class="oui" /> <label >Oeuf</label>
-                    <input type="checkbox" name="reponse4" value="non" class="non" /> <label >Fruit</label>
-                    <input type="checkbox" name="reponse5" value="oui" class="oui" /> <label >Céréales</label>
+                <div id="myQuest">
+                <label for="R1">Si Oui vous etes plutôt ?</label>
+                    <input type="checkbox" name="pdej1" value="Oui"/> <label>Produit Laitier</label>
+                    <input type="checkbox" name="pdej2" value="Oui"/> <label>Charcuterie</label>
+                    <input type="checkbox" name="pdej3" value="Oui"/> <label>Oeuf</label>
+                    <input type="checkbox" name="pdej4" value="Oui"/> <label>Fruit</label>
+                    <input type="checkbox" name="pdej5" value="Oui"/> <label>Cereales</label>
+                    <input type="checkbox" name="pdej6" value="Oui"/> <label>Boisson</label>
                 </div><br>
-                <button id="suivantmatin" >Suivant</button>
                 
-                <div id="diner" class="diner" style="display: none">
-                    <div id="questiondiner">
-                    <label> Que mangez-vous au diner ?</label>
-                    </div>
-
-                    <input type="checkbox" name="reponse1" value="oui" class="oui" /> <label >Plat de légumes</label>
-                    <input type="checkbox" name="reponse2" value="non" class="non" /> <label >Plat de viandes</label>
-                    <input type="checkbox" name="reponse3" value="oui" class="oui" /> <label >Plat de poissons</label>
-                    <input type="checkbox" name="reponse4" value="oui" class="oui" /> <label >Plat de féculents</label>
-                    <input type="checkbox" name="reponse5" value="oui" class="oui" /> <label >Entrée </label>
-                    <input type="checkbox" name="reponse6" value="oui" class="oui" /> <label >Dessert</label>
-                </div> <br>
-                <div id="plat" class="plat" style="display: none">
-                    <label>Quel plat préférez-vous mangez ?</label>
-                    <select name="sujet" class="sujet" required>
-                    <option value="" disabled selected hclassden>Choisissez le plat</option>
-                    <option value="probleme-compte">Problème avec mon compte</option>
-                    <option value="question-produit">Question à propos d’un produit</option>
-                    <option value="suivi-commande">Suivi de ma commande</option>
-                    <option value="autre">Autre...</option>
-                    </select>
-                </div> <br>
+                <div id="Second">
+                    <label for="R1"> Que mangez-vous au Diner ?</label><br>
+                    <input type="checkbox" name="repas6" value="Oui"/> <label>Une Entree</label>
+                    <input type="checkbox" name="repas1" value="Oui"/> <label>Plat de Legume</label> 
+                    <input type="checkbox" name="repas2" value="Oui"/> <label>Plat de Viande</label>
+                    <input type="checkbox" name="repas3" value="Oui"/> <label>Plat de Poisson</label>
+                    <input type="checkbox" name="repas4" value="Oui"/> <label>Plat de Pates</label>
+                    <input type="checkbox" name="repas5" value="Oui"/> <label>Plat Compose</label>
+                    <input type="checkbox" name="repas9" value="Oui"/> <label>Fast Food</label>
+                    <input type="checkbox" name="repas10" value="Oui"/> <label>Vegetarien</label>
+                    <input type="checkbox" name="repas8" value="Oui"/> <label>Fromage</label>
+                    <input type="checkbox" name="repas7" value="Oui"/> <label>Dessert</label>
+                </div><br>
+                <button type="submit" class="btn"> Valider </button>
+                <button type="submit" class="btn"> Retour </button>
             </form>
         </div>
-       <div class="container-flexe">
-           <button id="btnvalider" type="submit" class="btn" style="display: none"> Valider </button>
-           <button id="btnretour" type="submit" class="btn" style="display: none"> Retour </button>
-       </div>
-
         <script src="Questionnaire.js"></script>
     </body>
 </html>
-
-
