@@ -5,47 +5,52 @@
     <meta charset="UTF-8">
     <title>Formulaire Alimentaire</title>
     <link rel="stylesheet" href="Formulaire.css">
+    <script src="Formulaire.js"></script>
 </head>
 
 <body>
+    <section>
+        <div class="formulaire" id="Form">
+            <form action="Formulaire.php" method="POST" class="formulaire-container">
+                <h1>Présentez-vous</h1>
+                    <div class="inputbox">
+                        <input type="text" required name="name">
+                        <label >Nom</label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" required name="prenom">
+                        <label >Prénom</label>
+                    </div>
+                    <div class="inputbox">
+                        <label >Niveau Scolaire</label>
+                        <select name="etablissement" id="etablissement">
+                            <option value="Lycée">Collège</option>
+                            <option value="College">Lycée</option>
+                        </select>
+                    </div>
+                    <div class="inputbox">
+                        <input type="number" required min="10" max="18" name="age">
+                        <label >Age</label>
+                    </div>
+                <div class="container-flex">
+                    <div id="valider">
+                        <button type="submit"> Valider</button>
+                    </div>
+                 
+                </div>
+                
 
-<div class="formulaire" id="Form">
-    <form action="Formulaire.php" method="POST" class="formulaire-container">
-        <div id="presentation"><h1> Présentez-vous</h1></div>
-        <div id="nom"><p>
-            <label for="nom"> Nom</label>
-            <input type="text" placeholder="Votre nom" name="name" required>
-        </p>
-        </div>
-        <div id="prenom">
-            <p>
-                <label for="prenom"> Prénom</label>
-                <input type="text" placeholder="Votre prénom" name="prenom" required>
-            </p>
-        </div>
-        <div id="niveau">
-            <label for="niveau"> Niveau Scolaire</label>
-                <select name="Etablissement" id="Etablissement">
-                    <option value="Lycée">Collège</option>
-                    <option value="College">Lycée</option>
-                </select>
-            </p>
-        </div>
-        <div id="age"><p>
-            <label for="age"> Age </label>
-            <input class="age" type="number" placeholder="Votre age" name="age" required min="1" max="20">
-        </p></div>
 
-        <div class="container-flex">
-            <div id="valider">
-                <button type="submit" class="btn submit"> Valider</button>
-            </div>
-            <div id="annuler">
-                <button type="button" class="btn cancel" onclick="closeForm()"> Annuler</button>
+            </form>
+            
+            <div class="information">
+                Notre site Web utilise vos données pour les stocker dans une base de données. En cliquant sur "Valider", vous acceptez <a href="CGU.html">les conditions générales d'utilisation</a> et donc de nous laisser utiliser vos données à des fins pédagogiqe.
+    
             </div>
         </div>
-    </form>
-</div>
+    </section>
+
 </body>
+
 
 </html>
