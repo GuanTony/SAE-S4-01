@@ -5,81 +5,194 @@
     <meta charset="UTF-8">
     <title>Aliments</title>
 </head>
-
     <body>
-        <div id="Entree">
-            <p>Entree en particulier :
-                <select name="Entree">
-                    <option value="">...</option>
-                    <option value="Soupe">Soupe</option>
-                    <option value="Salade">Salade</option>
-                    <option value="Burritos">Burritos</option>
-                    <option value="Cake Sale">Cake Sale</option>
-                    <option value="Autre">Autre</option>
-                </select>
-            </p>
-        </div>
+        <form action="Aliment.php" method="POST">
+            <div id="Produit Laitier">
+                <p>Produit Laitier en particulier :
+                    <select name="Produit">
+                        <option value="">...</option>
+                        <option value="Yaourt">Yaourt</option>
+                        <option value="Milkshake">Milkshake</option>
+                        <option value="Fromage Blanc">Fromage Blanc</option>
+                        <option value="Lait">Lait</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </p>
+            </div>
 
-        <div id="Viande">
-            <p>Viande en particulier :
-                <select name="Viande">
-                    <option value="">...</option>
-                    <option value="Boeuf">Boeuf</option>
-                    <option value="Volaille">Volaille</option>
-                    <option value="Porc">Porc</option>
-                    <option value="Saucisse">Saucisse</option>
-                    <option value="Mouton">Mouton</option>
-                    <option value="Autre">Autre</option>
-                </select>
-            </p>
-        </div><br>
+            <div id="Fruit">
+                <p>Fruit en particulier :
+                    <select name="Fruit">
+                        <option value="">...</option>
+                        <option value="Pomme">Pomme</option>
+                        <option value="Orange">Orange</option>
+                        <option value="Fruit Rouge">Fruit Rouge</option>
+                        <option value="Agrume">Agrume</option>
+                        <option value="Kiwi">Kiwi</option>
+                        <option value="Fruit a Pepin"> Fruit a Pepin</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </p>
+            </div>
 
-        <div id="Poisson">
-            <p>Plat de Poisson en particulier :
-                <select name="Poisson">
-                    <option value="">...</option>
-                    <option value="Cabillaud">Cabillaud</option>
-                    <option value="Dorade">Dorade</option>
-                    <option value="Hareng">Hareng</option>
-                    <option value="Maquereau">Maquereau</option>
-                    <option value="Autre">Autre</option>
-                </select>
-            </p>
-        </div><br>
+            <div id="Boisson1">
+                <p>Boisson en particulier :
+                    <select name="Boisson1">
+                        <option value="">...</option>
+                        <option value="Jus d'Orange">Jus d'Orange</option>
+                        <option value="Jus de Pomme">Jus de Pomme</option>
+                        <option value="Jus de Raisin">Jus de Raisin </option>
+                        <option value="Eau">Eau</option>
+                        <option value="Cafe">Cafe</option>
+                        <option value="The">The</option>
+                        <option value="Jus de Fruit">Jus de Fruit</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </p>
+            </div>
 
-        <div id="Pates">
-            <p>Plat de Pates en particulier :
-                <select name="Pates">
-                    <option value="">...</option>
-                    <option value="Bolognaise">Bolognaise</option>
-                    <option value="Ketchup">Ketchup</option>
-                    <option value="Carbonara">Carbonara</option>
-                    <option value="Pesto">Pesto</option>
-                    <option value="Fromage">Fromage</option>
-                    <option value="Autre">Autre</option>
-                </select>
-            </p>
-        </div><br>
+            <div id="Patisserie">
+                <p>Patisserie en particulier :
+                    <select name="Patisserie">
+                        <option value="">...</option>
+                        <option value="Eclair">Eclair</option>
+                        <option value="Croissant">Croissant</option>
+                        <option value="Pain au Raisin">Pain au Raisin </option>
+                        <option value="Pain au Chocolat">Pain au Chocolat</option>
+                        <option value="Crepe">Crepe</option>
+                        <option value="Pancake">Pancake</option>
+                        <option value="Brioche">Brioche</option>
+                        <option value="Pain">Pain</option>
+                        <option value="Choquettes">Choquettes</option>
+                        <option value="Gaufre">Gaufre</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </p>
+            </div>
+            <div id="Entree">
+                <p>Entree en particulier :
+                    <select name="Entree">
+                        <option value="">...</option>
+                        <option value="Soupe">Soupe</option>
+                        <option value="Salade">Salade</option>
+                        <option value="Burritos">Burritos</option>
+                        <option value="Cake Sale">Cake Sale</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </p>
+            </div>
 
-        
-        <div id="Compose">
-            <p>Plat Compose en particulier :
-                <select name="Compose">
-                    <option value="">...</option>
-                    <option value="Burger">Burger</option>
-                    <option value="Lasagne">Lasagne</option>
-                    <option value="Hachi Parmentier">Hachi Parmentier</option>
-                    <option value="Crepe">Crepe</option>
-                    <option value="Sandwich">Sandwich</option>
-                    <option value="Nugget">Nugget</option>
-                    <option value="Pizza">Pizza</option>
-                    <option value="Fruit de Mer">Fruit de Mer</option>
-                    <option value="Autre">Autre</option>
-                </select>
-            </p>
-        </div><br>
-        
-        <button type="submit" class="btn"> Valider </button>
-        <button type="button" class="btn-cancel"> Annuler</button>
+            <div id="Viande">
+                <p>Viande en particulier :
+                    <select name="Viande">
+                        <option value="">...</option>
+                        <option value="Boeuf">Boeuf</option>
+                        <option value="Volaille">Volaille</option>
+                        <option value="Porc">Porc</option>
+                        <option value="Saucisse">Saucisse</option>
+                        <option value="Mouton">Mouton</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </p>
+            </div><br>
+
+            <div id="Poisson">
+                <p>Plat de Poisson en particulier :
+                    <select name="Poisson">
+                        <option value="">...</option>
+                        <option value="Cabillaud">Cabillaud</option>
+                        <option value="Dorade">Dorade</option>
+                        <option value="Hareng">Hareng</option>
+                        <option value="Maquereau">Maquereau</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </p>
+            </div><br>
+
+            <div id="Pates">
+                <p>Plat de Pates en particulier :
+                    <select name="Pates">
+                        <option value="">...</option>
+                        <option value="Bolognaise">Bolognaise</option>
+                        <option value="Ketchup">Ketchup</option>
+                        <option value="Carbonara">Carbonara</option>
+                        <option value="Pesto">Pesto</option>
+                        <option value="Fromage">Fromage</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </p>
+            </div><br>
+
+            
+            <div id="Compose">
+                <p>Plat Compose en particulier :
+                    <select name="Compose">
+                        <option value="">...</option>
+                        <option value="Burger">Burger</option>
+                        <option value="Lasagne">Lasagne</option>
+                        <option value="Hachi Parmentier">Hachi Parmentier</option>
+                        <option value="Crepe">Crepe</option>
+                        <option value="Sandwich">Sandwich</option>
+                        <option value="Nugget">Nugget</option>
+                        <option value="Pizza">Pizza</option>
+                        <option value="Fruit de Mer">Fruit de Mer</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </p>
+            </div><br>
+
+            <div id="Fromage">
+                <p>Fromage en particulier :
+                    <select name="Fromage">
+                        <option value="">...</option>
+                        <option value="Brie">Brie</option>
+                        <option value="Camembert">Camembert</option>
+                        <option value="Cantal">Cantal</option>
+                        <option value="Cheddar">Cheddar</option>
+                        <option value="Chevre">Chevre</option>
+                        <option value="Comté">Comté</option>
+                        <option value="Mimolette">Mimolette</option>
+                        <option value="RoqueFort">RoqueFort</option>
+                        <option value="Reblochon">Reblochon</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </p>
+            </div><br>
+            
+            <div id="Dessert">
+                <p>Dessert en particulier :
+                    <select name="Dessert">
+                        <option value="">...</option>
+                        <option value="CheesseCake">CheesseCake</option>
+                        <option value="Crepe">Crepe</option>
+                        <option value="Mousse au Chocolat">Mousse au Chocolat</option>
+                        <option value="Compote">Compote</option>
+                        <option value="Riz au Lait">Riz au Lait</option>
+                        <option value="Creme Brule">Creme Brule</option>
+                        <option value="Gateau">Gateau</option>
+                        <option value="Bonbon">Bonbon</option>
+                        <option value="Patisserie">Patisserie</option>
+                        <option value="Glace">Glace</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </p>
+            </div><br>
+
+            <div id="Boisson2">
+                <p>Boisson en particulier :
+                    <select name="Boisson2">
+                        <option value="">...</option>
+                        <option value="Soda">Soda</option>
+                        <option value="Jus de Fruit">Jus de Fruit</option>
+                        <option value="Sirop">Sirop</option>
+                        <option value="Eau">Eau</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </p>
+            </div>
+
+            <button type="submit" class="btn"> Valider </button>
+            <button type="button" class="btn-cancel"> Annuler</button>
+        </form>
     </body>
 </html>
