@@ -1,46 +1,74 @@
-<!DOCTYPE html>  
-<html>  
- <head>  
+<!DOCTYPE html>
+<html>
+<head>
     <meta charset="UTF-8">
-	<title>Questionnaire Alimentaire</title>  
+    <title>Questionnaire Alimentaire</title>
     <link rel="stylesheet" href="Questionnaire.css">
- </head>  
-    <body> 
-        <h1>Voici le Questionnaire</h1> 
-        <div class="questionnaire">
-            <form action="Questionnaire.php" method="POST">
-                <div id="First">
-                <label for="Q1">Mangez vous le matin ?</label>
-                <input type="radio" name="question" value="oui" id="oui" onclick="openQuest()"/> <label>oui</label>
-                <input type="radio" name="question" value="non" id="non" onclick="closeQuest()"/> <label>non</label>
-                </div><br>
-                <div id="myQuest">
-                <label for="R1">Si Oui vous etes plutôt ?</label>
-                    <input type="checkbox" name="pdej1" value="Oui"/> <label>Produit Laitier</label>
-                    <input type="checkbox" name="pdej2" value="Oui"/> <label>Charcuterie</label>
-                    <input type="checkbox" name="pdej3" value="Oui"/> <label>Oeuf</label>
-                    <input type="checkbox" name="pdej4" value="Oui"/> <label>Fruit</label>
-                    <input type="checkbox" name="pdej5" value="Oui"/> <label>Cereales</label>
-                    <input type="checkbox" name="pdej6" value="Oui"/> <label>Boisson</label>
-                </div><br>
-                
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+<div class="questionnaire">
+    <form>
+        <div id="conteneur">
+            <div id="conteneur2">
+        <div id="matin">
+            <div id="questionmatin">
+                <div class="titre">
+                    <label>Mangez vous le matin ?</label>
+                </div>
+            </div>
+            <input type="radio" name="question" value="oui" class="oui" onclick="openQuest()"/> <label>Oui</label>
+            <input type="radio" name="question" value="non" class="non" onclick="closeQuest()" checked/> <label>Non</label>
+        </div>
+        <br>
+        <div id="choixmatin" class="myQuest">
+            <div id="plutot">
+                <div class="titre">
+                    <label>Vous êtes plutôt ?</label>
+                    <br>
+                </div>
+            </div>
+            <input type="checkbox" name="pdej1" value="Oui" class="clear"/> <label>Produit Laitier</label>
+            <input type="checkbox" name="pdej2" value="Oui" class="clear"/> <label>Charcuterie</label>
+            <input type="checkbox" name="pdej3" value="Oui" class="clear"/> <label>Oeuf</label>
+            <input type="checkbox" name="pdej4" value="Oui" class="clear"/> <label>Fruit</label>
+            <input type="checkbox" name="pdej5" value="Oui" class="clear"/> <label>Céréales</label>
+            <input type="checkbox" name="pdej6" value="Oui" class="clear"/> <label>Boisson</label>
+            <input type="checkbox" name="pdej7" value="Oui" class="clear"/> <label>Patisserie</label>
+        </div>
+        <br>
+
+        <div id="diner" class="diner">
+            <div id="questiondiner">
                 <div id="Second">
-                    <label for="R1"> Que mangez-vous au Diner ?</label><br>
+                    <div class="titre">
+                        <label> Que mangez-vous au Diner ?</label><br>
+                    </div>
+                </div>
+                <div id="choixdiner">
                     <input type="checkbox" name="repas6" value="Oui"/> <label>Une Entree</label>
-                    <input type="checkbox" name="repas1" value="Oui"/> <label>Plat de Legume</label> 
+                    <input type="checkbox" name="repas1" value="Oui"/> <label>Plat de Legume</label>
                     <input type="checkbox" name="repas2" value="Oui"/> <label>Plat de Viande</label>
                     <input type="checkbox" name="repas3" value="Oui"/> <label>Plat de Poisson</label>
                     <input type="checkbox" name="repas4" value="Oui"/> <label>Plat de Pates</label>
                     <input type="checkbox" name="repas5" value="Oui"/> <label>Plat Compose</label>
                     <input type="checkbox" name="repas9" value="Oui"/> <label>Fast Food</label>
-                    <input type="checkbox" name="repas10" value="Oui"/> <label>Vegetarien</label>
+                    <input type="checkbox" name="repas10" value="Oui"/> <label>Végétarien</label>
                     <input type="checkbox" name="repas8" value="Oui"/> <label>Fromage</label>
                     <input type="checkbox" name="repas7" value="Oui"/> <label>Dessert</label>
-                </div><br>
-                <button type="submit" class="btn"> Valider </button>
-                <button type="submit" class="btn"> Retour </button>
-            </form>
+                </div>
+            </div>
+            <br>
+            <div class="bouton">
+                <button type="submit" class="btn" id="btnvalider"> Valider</button>
+                <button type="submit" class="btn" id="btnretour"> Retour</button>
+                </div>
+            </div>
         </div>
-        <script src="Questionnaire.js"></script>
-    </body>
+        </div>
+    </form>
+    </div>
+<script src="Questionnaire.js"></script>
+</body>
 </html>
+
