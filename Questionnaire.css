@@ -23,10 +23,12 @@ body{
 }
 
 .titre{
+
     font-size: 2em;
     color: black;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    margin-top: 30px;
 }
 label{
     font-size: 20px;
@@ -37,6 +39,7 @@ label{
     margin: 10px;
     width: 100%;
     background : transparent;
+    padding-top: 20px;
 }
 #choixmatin{
     display:none;
@@ -54,6 +57,7 @@ label{
     margin: 10px;
 }
 #conteneur{
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,7 +69,7 @@ label{
     border: 1px solid black;
     border-radius: 30px;
     margin: 20px;
-    background-color: #b3dcd4;
+    background-color: #7FDBFF;
 }
 
 button:hover {
@@ -81,4 +85,8 @@ width: 15px;
 label{
     margin-right: 10px;
     margin-left: 5px;
+}
+
+.hide {
+    display: none;
 }

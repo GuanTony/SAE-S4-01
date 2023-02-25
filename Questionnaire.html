@@ -28,14 +28,78 @@
                     <br>
                 </div>
             </div>
-            <input type="checkbox" name="pdej1" value="Oui" class="clear"/> <label>Produit Laitier</label>
-            <input type="checkbox" name="pdej2" value="Oui" class="clear"/> <label>Charcuterie</label>
+            <input type="checkbox" name="pdej1" value="Oui" class="clear" onclick="showPL()" id="pl"/> <label>Produit Laitier</label>
+            <input type="checkbox" name="pdej2" value="Oui" class="clear" /> <label>Charcuterie</label>
             <input type="checkbox" name="pdej3" value="Oui" class="clear"/> <label>Oeuf</label>
-            <input type="checkbox" name="pdej4" value="Oui" class="clear"/> <label>Fruit</label>
+            <input type="checkbox" name="pdej4" value="Oui" class="clear" onclick="showfruit()" id="fru"/> <label>Fruit</label>
             <input type="checkbox" name="pdej5" value="Oui" class="clear"/> <label>Céréales</label>
-            <input type="checkbox" name="pdej6" value="Oui" class="clear"/> <label>Boisson</label>
-            <input type="checkbox" name="pdej7" value="Oui" class="clear"/> <label>Patisserie</label>
+            <input type="checkbox" name="pdej6" value="Oui" class="clear" onclick="showboisson1()" id="bs1"/> <label>Boisson</label>
+            <input type="checkbox" name="pdej7" value="Oui" class="clear" onclick="showpatisserie()" id="pts"/> <label>Patisserie</label>
         </div>
+
+                <div id="Produit Laitier" class="hide">
+                    <p>Produit Laitier en particulier :
+                        <select name="Produit">
+                            <option value="">...</option>
+                            <option value="Yaourt">Yaourt</option>
+                            <option value="Milkshake">Milkshake</option>
+                            <option value="Fromage Blanc">Fromage Blanc</option>
+                            <option value="Lait">Lait</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                    </p>
+                </div>
+                <br>
+
+                <div id="Fruit" class="hide">
+                    <p>Fruit en particulier :
+                        <select name="Fruit">
+                            <option value="">...</option>
+                            <option value="Pomme">Pomme</option>
+                            <option value="Orange">Orange</option>
+                            <option value="Fruit Rouge">Fruit Rouge</option>
+                            <option value="Agrume">Agrume</option>
+                            <option value="Kiwi">Kiwi</option>
+                            <option value="Fruit a Pepin"> Fruit a Pepin</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                    </p>
+                </div>
+                <br>
+                <div id="Boisson1" class="hide">
+                    <p>Boisson en particulier :
+                        <select name="Boisson1">
+                            <option value="">...</option>
+                            <option value="Jus d'Orange">Jus d'Orange</option>
+                            <option value="Jus de Pomme">Jus de Pomme</option>
+                            <option value="Jus de Raisin">Jus de Raisin </option>
+                            <option value="Eau">Eau</option>
+                            <option value="Cafe">Cafe</option>
+                            <option value="The">The</option>
+                            <option value="Jus de Fruit">Jus de Fruit</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                    </p>
+                </div>
+                <br>
+                <div id="Patisserie" class="hide">
+                    <p>Patisserie en particulier :
+                        <select name="Patisserie">
+                            <option value="">...</option>
+                            <option value="Eclair">Eclair</option>
+                            <option value="Croissant">Croissant</option>
+                            <option value="Pain au Raisin">Pain au Raisin </option>
+                            <option value="Pain au Chocolat">Pain au Chocolat</option>
+                            <option value="Crepe">Crepe</option>
+                            <option value="Pancake">Pancake</option>
+                            <option value="Brioche">Brioche</option>
+                            <option value="Pain">Pain</option>
+                            <option value="Choquettes">Choquettes</option>
+                            <option value="Gaufre">Gaufre</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                    </p>
+                </div>
         <br>
 
         <div id="diner" class="diner">
@@ -46,17 +110,140 @@
                     </div>
                 </div>
                 <div id="choixdiner">
-                    <input type="checkbox" name="repas6" value="Oui"/> <label>Une Entree</label>
+                    <input type="checkbox" name="repas6" value="Oui" onclick="showentree()" id="ent"/> <label>Une Entree</label>
                     <input type="checkbox" name="repas1" value="Oui"/> <label>Plat de Legume</label>
-                    <input type="checkbox" name="repas2" value="Oui"/> <label>Plat de Viande</label>
-                    <input type="checkbox" name="repas3" value="Oui"/> <label>Plat de Poisson</label>
-                    <input type="checkbox" name="repas4" value="Oui"/> <label>Plat de Pates</label>
-                    <input type="checkbox" name="repas5" value="Oui"/> <label>Plat Compose</label>
+                    <input type="checkbox" name="repas2" value="Oui" onclick="showviande()" id="via"/> <label>Plat de Viande</label>
+                    <input type="checkbox" name="repas3" value="Oui" onclick="showpoisson()" id="poi"/> <label>Plat de Poisson</label>
+                    <input type="checkbox" name="repas4" value="Oui" onclick="showpates()" id="pat"/> <label>Plat de Pates</label>
+                    <input type="checkbox" name="repas5" value="Oui" onclick="showcompose()" id="com"/> <label>Plat Compose</label>
                     <input type="checkbox" name="repas9" value="Oui"/> <label>Fast Food</label>
                     <input type="checkbox" name="repas10" value="Oui"/> <label>Végétarien</label>
-                    <input type="checkbox" name="repas8" value="Oui"/> <label>Fromage</label>
-                    <input type="checkbox" name="repas7" value="Oui"/> <label>Dessert</label>
+                    <input type="checkbox" name="repas8" value="Oui" onclick="showfromage()" id="fro"/> <label>Fromage</label>
+                    <input type="checkbox" name="repas7" value="Oui" onclick="showdessert()" id="des"/> <label>Dessert</label>
                 </div>
+            </div>
+
+            <div id="Entree" class="hide">
+                <p>Entree en particulier :
+                    <select name="Entree">
+                        <option value="">...</option>
+                        <option value="Soupe">Soupe</option>
+                        <option value="Salade">Salade</option>
+                        <option value="Burritos">Burritos</option>
+                        <option value="Cake Sale">Cake Sale</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </p>
+            </div>
+            <br>
+
+            <div id="Viande" class="hide">
+                <p>Viande en particulier :
+                    <select name="Viande">
+                        <option value="">...</option>
+                        <option value="Boeuf">Boeuf</option>
+                        <option value="Volaille">Volaille</option>
+                        <option value="Porc">Porc</option>
+                        <option value="Saucisse">Saucisse</option>
+                        <option value="Mouton">Mouton</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </p>
+            </div><br>
+
+            <div id="Poisson" class="hide">
+                <p>Plat de Poisson en particulier :
+                    <select name="Poisson">
+                        <option value="">...</option>
+                        <option value="Cabillaud">Cabillaud</option>
+                        <option value="Dorade">Dorade</option>
+                        <option value="Hareng">Hareng</option>
+                        <option value="Maquereau">Maquereau</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </p>
+            </div><br>
+
+            <div id="Pates" class="hide">
+                <p>Plat de Pates en particulier :
+                    <select name="Pates">
+                        <option value="">...</option>
+                        <option value="Bolognaise">Bolognaise</option>
+                        <option value="Ketchup">Ketchup</option>
+                        <option value="Carbonara">Carbonara</option>
+                        <option value="Pesto">Pesto</option>
+                        <option value="Fromage">Fromage</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </p>
+            </div><br>
+
+
+            <div id="Compose" class="hide">
+                <p>Plat Compose en particulier :
+                    <select name="Compose">
+                        <option value="">...</option>
+                        <option value="Burger">Burger</option>
+                        <option value="Lasagne">Lasagne</option>
+                        <option value="Hachi Parmentier">Hachi Parmentier</option>
+                        <option value="Crepe">Crepe</option>
+                        <option value="Sandwich">Sandwich</option>
+                        <option value="Nugget">Nugget</option>
+                        <option value="Pizza">Pizza</option>
+                        <option value="Fruit de Mer">Fruit de Mer</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </p>
+            </div><br>
+
+            <div id="Fromage" class ="hide">
+                <p>Fromage en particulier :
+                    <select name="Fromage">
+                        <option value="">...</option>
+                        <option value="Brie">Brie</option>
+                        <option value="Camembert">Camembert</option>
+                        <option value="Cantal">Cantal</option>
+                        <option value="Cheddar">Cheddar</option>
+                        <option value="Chevre">Chevre</option>
+                        <option value="Comté">Comté</option>
+                        <option value="Mimolette">Mimolette</option>
+                        <option value="RoqueFort">RoqueFort</option>
+                        <option value="Reblochon">Reblochon</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </p>
+            </div><br>
+
+            <div id="Dessert" class="hide">
+                <p>Dessert en particulier :
+                    <select name="Dessert">
+                        <option value="">...</option>
+                        <option value="CheesseCake">CheesseCake</option>
+                        <option value="Crepe">Crepe</option>
+                        <option value="Mousse au Chocolat">Mousse au Chocolat</option>
+                        <option value="Compote">Compote</option>
+                        <option value="Riz au Lait">Riz au Lait</option>
+                        <option value="Creme Brule">Crème Brûlée</option>
+                        <option value="Gateau">Gateau</option>
+                        <option value="Bonbon">Bonbon</option>
+                        <option value="Patisserie">Patisserie</option>
+                        <option value="Glace">Glace</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </p>
+            </div><br>
+
+            <div id="Boisson2">
+                <p>Boisson en particulier :
+                    <select name="Boisson2">
+                        <option value="">...</option>
+                        <option value="Soda">Soda</option>
+                        <option value="Jus de Fruit">Jus de Fruit</option>
+                        <option value="Sirop">Sirop</option>
+                        <option value="Eau">Eau</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </p>
             </div>
             <br>
             <div class="bouton">
