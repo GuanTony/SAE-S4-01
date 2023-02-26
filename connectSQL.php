@@ -1,11 +1,11 @@
 <?php
-	//$hostname = "vs-wamp";
-	$hostname = "localhost";	
-	$base= "information perso";
+	//$hostname = "Uwamp";
+	$hostname = "sql7.freesqldatabase.com";	
+	$base= "sql7600542";
 	//$loginBD= "info perso";	
-	$loginBD= "root";	
+	$loginBD= "sql7600542";	
 	//$passBD="info perso";
-	$passBD="root";
+	$passBD="Ffzi8g1bPI";
 	//$pdo = null;
 	try {
 		// DSN (Data Source Name)pour se connecter à MySQL
