@@ -15,33 +15,34 @@
   $msg = '';
   
 
-  if  (count($_POST)==0)
-      require ('Aliment.html');
-  else{
+      if  (count($_POST)==0)
+      require ('Questionnaire.html');
+    else{
         if(!ajout($Produit,$Fruit,$Boisson1,$Patisserie,$Entree,$Viande,$Poisson,$Pates,$Compose,$Fromage,$Dessert,$Boisson2)){
             $msg = "ajout impossible veuillez réesayer plus tard";
-            require ('Aliment.html');
+            require ('Questionnaire.html');
         } else{
           $url = "Merci.html"; 
           header("Location:".$url);
         }
-  }
+    }
+
 
     function ajout($Produit,$Fruit,$Boisson1,$Patisserie,$Entree,$Viande,$Poisson,$Pates,$Compose,$Fromage,$Dessert,$Boisson2){
-      require('connectSQL.php');
-      $sql = "INSERT INTO `aliments` (`Produit Laitier`,`Fruit`,`Boisson1`,`Patisserie`,`Entree`,`Viande`,`Poisson`,`Pates`,`Compose`,`Fromage`,`Dessert`,`Boisson2`,`ID`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
-          try{
-              $commande = $pdo->prepare($sql);
-              $exec = $commande->execute([$Produit,$Fruit,$Boisson1,$Patisserie,$Entree,$Viande,$Poisson,$Pates,$Compose,$Fromage,$Dessert,$Boisson2,$_SESSION[`ID`]]);
-              getID();
-              return true;
-          }
-          catch (PDOException $e) {
-              echo utf8_encode("Echec de Insert : " . $e->getMessage() . "\n");
-              die(); // On arrête tout.
-          }
-          return false;
+    require('connectSQL.php');
+    $sql = "INSERT INTO `aliments` (`Produit Laitier`,`Fruit`,`Boisson1`,`Patisserie`,`Entree`,`Viande`,`Poisson`,`Pates`,`Compose`,`Fromage`,`Dessert`,`Boisson2`,`ID`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        try{
+            $commande = $pdo->prepare($sql);
+            $exec = $commande->execute([$Produit,$Fruit,$Boisson1,$Patisserie,$Entree,$Viande,$Poisson,$Pates,$Compose,$Fromage,$Dessert,$Boisson2,$_SESSION[`ID`]]);
+            getID();
+            return true;
         }
+        catch (PDOException $e) {
+            echo utf8_encode("Echec de Insert : " . $e->getMessage() . "\n");
+            die(); // On arrête tout.
+        }
+        return false;
+      }
     
     function getID(){
       require('connectSQL.php');

@@ -1,11 +1,11 @@
 <?php
 	//$hostname = "Uwamp";
-	$hostname = "sql.freedb.tech";	
+	$hostname = "localhost";	
 	$base= "freedb_SAE-S4";
 	//$loginBD= "info perso";	
-	$loginBD= "freedb_TonyG";	
+	$loginBD= "root";	
 	//$passBD="info perso";
-	$passBD="8wrGdDJqKu@5Ug5";
+	$passBD="";
 	//$pdo = null;
 	try {
 		// DSN (Data Source Name)pour se connecter à MySQL
@@ -14,7 +14,7 @@
 		// $dsn = 'sqlsrv:server=(local)\S2008R2 ; database=mabase';
 		//$pdo = new PDO ($dsn, $loginBD, $passBD);
 		
-		$pdo = new PDO ($dsn, $loginBD, $passBD,
+		$pdo = new PDO ($dsn,$loginBD,$passBD,
 		array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 		// Le dernier argument sert à ce que toutes les chaines de caractères 
 		// en entrée et sortie de MySql soit dans le codage UTF-8
